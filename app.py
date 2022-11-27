@@ -25,14 +25,16 @@ def search():
     a = ""    
     li = []
     def go(counter=0):
-        # This function will execute every 150ms and add a part of the response to the screen.
+        # This function will execute every 150ms
+        #  and add a part of the response to the screen.
         result_box_cent.insert(END,li[counter]+ " ")
         if counter < len(li)-1:
             app.after(150, lambda: go(counter+1))
   
     txtToComplete = text
     if(txtToComplete!=0):
-        res = returnCompletion.returnText(txtToComplete) # This will return text completion grabbed from open-ai API
+        res = returnCompletion.returnText(txtToComplete) # This function
+        #  will return text completion grabbed from open-ai API
         print("Pong! Code:200")
         a =res
         li = a.split(" ")
